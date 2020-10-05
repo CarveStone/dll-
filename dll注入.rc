@@ -1,0 +1,32 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#define	DLG_MAIN		1
+#define	IDC_DLLPATH		2
+#define	IDC_CHOOSEPATH		3
+#define	IDC_INPUTPID		4
+#define	ICO_MAIN		0x1000
+#define	IDC_INJECTION		5
+#define	IDC_UNLOADING		6
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"carve.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 50, 50,280, 180
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "DLL注入工具"
+FONT 9, "宋体"
+{
+
+ CTEXT "", IDC_DLLPATH, 10, 20, 200, 20
+ CTEXT "PID：", -1, 10, 55, 40, 20
+ EDITTEXT IDC_INPUTPID,50,50,60,20
+ DEFPUSHBUTTON "选中注入的DLL",IDC_CHOOSEPATH,160,45,100,30
+ DEFPUSHBUTTON "注入", IDC_INJECTION, 20, 120, 100, 30
+ DEFPUSHBUTTON "卸载(暂不可用)", IDC_UNLOADING, 160, 120, 100, 30
+
+
+
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
